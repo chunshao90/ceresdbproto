@@ -5,7 +5,7 @@ option java_package = "io.ceresdb.proto.internal";
 option java_outer_classname = "Prometheus";
 option go_package = "github.com/CeresDB/ceresdbproto/golang/pkg/ceresprompb";
 
-import "common.proto";
+import "xx/common.proto";
 
 message Expr {
   oneof Node {
