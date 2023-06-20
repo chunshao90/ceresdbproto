@@ -150,3 +150,11 @@ message PrometheusRemoteQueryResponse {
   // Encoded response for https://github.com/prometheus/prometheus/blob/v2.43.0/prompb/remote.proto#L74
   bytes response = 2;
 }
+
+message Column{
+repeated Value data = 1;
+}
+
+message ColumnData{
+   map<string,Column> data = 1;
+}
