@@ -5,6 +5,7 @@ syntax = "proto3";
 package table_requests;
 
 import "engine/schema.proto";
+import "storage.proto";
 
 // Write table request
 message WriteRequest {
@@ -16,4 +17,14 @@ message WriteRequest {
   //
   // Each row is encoded in the same format as memtable
   repeated bytes rows = 3;
+  ColumnData column_data = 4;
+
+}
+
+message Column{
+repeated storage.Value data = 1;
+}
+
+message ColumnData{
+   map<string,Column> data = 1;
 }

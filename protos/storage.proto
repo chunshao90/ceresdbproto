@@ -151,10 +151,4 @@ message PrometheusRemoteQueryResponse {
   bytes response = 2;
 }
 
-message Column{
-repeated Value data = 1;
-}
 
-message ColumnData{
-   map<string,Column> data = 1;
-}
