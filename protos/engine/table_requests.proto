@@ -21,10 +21,10 @@ message WriteRequest {
 
 }
 
-message Column{
-repeated storage.Value data = 1;
+message Column {
+    repeated storage.Value data = 1;
 }
 
-message ColumnData{
-   map<string,Column> data = 1;
+message ColumnData {
+    map<string,Column> data = 1;
 }

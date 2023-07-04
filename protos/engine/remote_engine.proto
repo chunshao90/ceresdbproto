@@ -8,6 +8,7 @@ import "engine/time_range.proto";
 import "cluster.proto";
 import "common.proto";
 import "storage.proto";
+import "engine/table_requests.proto";
 
 service RemoteEngineService {
   rpc Read(ReadRequest) returns (stream ReadResponse) {}
@@ -71,6 +72,7 @@ message RowGroup {
 message WriteRequest {
   TableIdentifier table = 1;
   RowGroup row_group = 2;
+  table_requests.ColumnData column_data = 3;
 }
 
 message WriteResponse {
